@@ -3,7 +3,8 @@ export default {
     plugins: [
         ['umi-plugin-react', {
             // 这里暂时还没有添加配置，该插件还不会有作用，我们会在后面的课程按照需求打开相应的配置
-            antd: true
+            antd: true,
+            dva: true,
         }],
     ],
 
@@ -33,9 +34,11 @@ export default {
     // 访问 /dashboard/monitor 时，使用 page 文件夹下的 Dashboard/Monitor 组件渲染到 layout 文件中 children 部分
     //
     // 访问 /dashboard/workplace 时，使用 page 文件夹下的 Dashboard/Workplace 组件渲染到 layout 文件中 children 部分
-    routes: [{
+    routes: [
+        {
         path: '/',
         component: '../layout',
+        // 布局与路由
         routes: [
             {
                 path: '/',
@@ -45,6 +48,7 @@ export default {
                 path: '/helloworld',
                 component: 'Helloworld'
             },
+            { path: 'puzzlecards', component: './puzzlecards' },
             {
                 path: '/dashboard',
                 routes: [
