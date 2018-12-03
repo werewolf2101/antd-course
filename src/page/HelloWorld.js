@@ -5,7 +5,7 @@ import { Card } from 'antd'
 //     return <div>hello world</div>;
 // }
 
-//Card组件
+// Card组件
 export default () => {
     const style = {
         width: '400px',
@@ -19,7 +19,7 @@ export default () => {
         <Card style={style} actions={[<a>操作一</a>, <a>操作二</a>]}>
             <Card.Meta
                 avatar={<img
-                     alt="" 
+                     alt=""
                      //  图片大小
                      style={{ width: '64px', height: '64px', borderRadius: '32px' }}
                      src="https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png"

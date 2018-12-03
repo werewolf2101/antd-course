@@ -6,10 +6,23 @@ export default {
             antd: true
         }],
     ],
-    //定义路由
+
+    //定义路由 Card
+    // routes: [{
+    //     path: '/',
+    //     component: './HelloWorld',
+    // }],
+
+    //定义理由 基本布局
     routes: [{
         path: '/',
-        component: './HelloWorld',
+        component: '../layout',
+        routes: [
+            {
+                path: 'helloworld',
+                component: './HelloWorld'
+            },
+        ]
     }],
 }
 
