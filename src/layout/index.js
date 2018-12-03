@@ -1,6 +1,7 @@
 // 引入Layout布局组件, Menu菜单组件, Icon图标组件
-import { Component } from   'react';
+import { Component } from 'react';
 import { Layout, Menu, Icon } from 'antd';
+import Link from 'umi/link';
 
 // Header, Footer, Sider, Content组件在Layout组件模块下
 const { Header, Footer, Sider, Content} = Layout;
@@ -20,13 +21,22 @@ class BasicLayout extends Component{
                             <Icon type="pie-chart" />
                             <span>Helloworld</span>
                         </Menu.Item>
+                        {/*需要配置导航，使得能在点击导航时，触发 URL 刷新，路由根据配置返回和当前 URL 匹配的内容.*/}
                         <SubMenu
                             key="sub1"
                             title={<span><Icon type="dashboard" /><span>Dashboard</span></span>}
                         >
-                            <Menu.Item key="2">分析页</Menu.Item>
-                            <Menu.Item key="3">监控页</Menu.Item>
-                            <Menu.Item key="4">工作台</Menu.Item>
+                            <Menu.Item key="2"><Link to='/dashboard/analysis'>分析页</Link></Menu.Item>
+                            <Menu.Item key="3"><Link to='/dashboard/monitor'>监控页</Link></Menu.Item>
+                            <Menu.Item key="4"><Link to='/dashboard/workplace'>工作台</Link></Menu.Item>
+                        </SubMenu>
+                        <SubMenu
+                            key="sub2"
+                            title={<span><Icon type="dashboard" /><span>Dashboard2</span></span>}
+                        >
+                            <Menu.Item key="2">分析页2</Menu.Item>
+                            <Menu.Item key="3">监控页2</Menu.Item>
+                            <Menu.Item key="4">工作台2</Menu.Item>
                         </SubMenu>
                     </Menu>
                 </Sider>
