@@ -11,3 +11,9 @@ export default {
         component: './HelloWorld',
     }],
 }
+
+// https://github.com/ant-design/ant-design-pro/blob/master/config/config.js#L23
+    // dynamicImport: {
+    //     loadingComponent: './components/PageLoading/index',
+    // },
+// 这个删了打包一个js。
